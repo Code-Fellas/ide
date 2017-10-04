@@ -7,13 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/editor.css" rel="stylesheet" type="text/css" />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+<script>
+  function btnColor(btn) {
+   var property = document.getElementById('codes')
+   var property1 = document.getElementById('code')
+   
+   
+     if (btn == false) {
+         document.body.style.background = '#FFFFFF';
+         property.style.backgroundColor='#FFFFFF';
+         property1.style.backgroundColor='#c5c6c9';
+        
+     }
+    else {
+    document.body.style.background = '#696969';
+    property.style.backgroundColor='#000000';
+    property1.style.backgroundColor='#000000';
+    }
+}
+</script>
+    
+</style>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="code">
     <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header" >
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -49,17 +70,17 @@
         <div class="col-lg-6 col-md-6">
             <div class="editor-buttons pull-right">
                 <button title="Editor Help" class="btn-ide-action fa fa-question ease"></button>
-                <button title="Swtich Theme" class="btn-ide-action fa fa-circle-o ease"></button>
+                <input type="checkbox" checked data-toggle="toggle" data-on="black" data-off="white" onchange="btnColor($(this).prop('checked'))" >
                 <button title="Download Your Code" class="btn-ide-action fa fa-download ease"></button>
                 <button title="Go Fullscreen" class="btn-ide-action fa fa-expand ease"></button>
                 <!-- <button title="Exit Fullscreen" class="btn-ide-action fa fa-compress ease"></button> -->
             </div>
         </div>
     </div>
-    <div class="row code-editor-wrapper">
+    <div class="row code-editor-wrapper" ">
         <div class="col-lg-12 col-md-12">
             <form action="/submit" id="userform">
-                <textarea rows="20" cols="50" name="comment" form="userform" class="code-editor">Your code goes here</textarea>
+                <textarea  rows="20" cols="50" name="comment" form="userform" class="code-editor" id="codes">Your code goes here</textarea>
               
                 <button class="btn btn-primary btn-run_code pull-right" type="submit" type="button">Run</button>
                 <button class="btn btn-primary btn-submit_code pull-right" type="submit" type="button">Submit</button>
@@ -71,5 +92,6 @@
 </body>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 </html>
