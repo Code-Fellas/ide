@@ -50,11 +50,11 @@ body {
     margin-top: 20px;
 }
 
-.btn-code_run,
-.btn-code_submit {
+.btn-run_code,
+.btn-submit_code {
     min-width: 120px;
 }
 
-.btn-code_submit {
+.btn-submit_code {
     margin-left: 10px;
 }
