@@ -1,0 +1,51 @@
+body {
+    background: white;
+}
+
+.navbar-default {
+    border: none !important;
+}
+
+.ease {
+    transition: all ease 0.2s;
+}
+
+.code-editor {
+    width: 100%;
+    border-color: #d2d2d2;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+
+.btn-ide-action {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background: #edeef1;
+    outline: none;
+    color: #353535;
+}
+
+.btn-ide-action:hover {
+    background: transparent;
+}
+
+.lang-chooser {
+    min-width: 250px;
+    padding: 0px 20px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    background: url(../images/arr-down.png) no-repeat right #edeef1;
+    -webkit-appearance: none;
+    background-position-x: 220px;
+    cursor: pointer;
+}
+
+.code-editor-wrapper {
+    margin-top: 20px;
+}
