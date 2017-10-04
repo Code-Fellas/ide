@@ -70,6 +70,14 @@ body {
 	width: 15%!important;
 	padding-top: 4px;
 }
+.btn-submit_code {
+	color: #fff;
+	font-family: monospace;
+	font-size: 2rem;
+	width: 15%!important;
+	padding-top: 4px;
+	margin-right: 5px;
+}
 .btn-run_code:hover {
 	background-color: rgba(50,205,50,.6);
 	border-color: rgba(50,205,50,.6);
