@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>My IDE</title>
+    <title>Code-Fellas : IDE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/ide.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/editor.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Code-Fellas</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="active"><a href="#">Code Editor</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+</nav>
 <div class="container">
-	<div class="row">
-		<div class="editor">
-	<div class="head">
-		<div class="bitem">
-			<ul class="bitem-ul">
-			  <li><p style="text-align: center; font-size: 22px"><b>My Area</b></p></li>
-
-			</ul>
-		</div>
-	</div>
-	<div class="body">
-	  <textarea class="textarea" name="code_input" id="code_input">
-<!DOCTYPE html>
-<html>
- <head>
-  <title></title>
- </head>
- <body>
-
- </body>
-</html>
-	  </textarea>
-	   <button class="btn btn-primary" id="btn-view" onClick="preview();">Result</button>
-
-		<button class="btn btn-success" id="btn-view" onClick="">Submit</button>
-		<div id="iframeshow" class="iframeshow">
-
-	  </div>
-	</div>
-	<div class="footer">
-
-	</div>
+    <div class="row">
+        <div class="col-lg-6 pull-left">
+            <select class="lang-chooser">
+                <option value="html">HTML</option>
+                <option value="php">PHP</option>
+                <option value="css">CSS</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="c++">C++</option>
+                <option value="c#">C#</option>
+            </select>
+        </div>
+        <div class="col-lg-6">
+            <div class="editor-buttons pull-right">
+                <button title="Editor Help" class="btn-ide-action fa fa-question ease"></button>
+                <button title="Swtich Theme" class="btn-ide-action fa fa-circle-o ease"></button>
+                <button title="Download Your Code" class="btn-ide-action fa fa-download ease"></button>
+                <button title="Go Fullscreen" class="btn-ide-action fa fa-expand ease"></button>
+                <!-- <button title="Exit Fullscreen" class="btn-ide-action fa fa-compress ease"></button> -->
+            </div>
+        </div>
+    </div>
+    <div class="row code-editor-wrapper">
+        <div class="col-lg-12">
+            <form action="/submit" id="userform">
+                <textarea rows="20" cols="50" name="comment" form="userform" class="code-editor">Your code goes here</textarea>
+                <button class="form-control btn btn-primary btn-run_code" type="submit" type="button">Run</button>
+            </form>
+        </div>
+    </div>
 </div>
-
-	</div>
-</div>
-
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ide.js"></script>
 </body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 </html>
