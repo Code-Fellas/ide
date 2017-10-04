@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/editor.css" rel="stylesheet" type="text/css" />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -49,7 +50,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="editor-buttons pull-right">
                 <button title="Editor Help" class="btn-ide-action fa fa-question ease"></button>
-                <button title="Swtich Theme" class="btn-ide-action fa fa-circle-o ease"></button>
+                <input type="checkbox" checked data-toggle="toggle" data-on="black" data-off="white">
                 <button title="Download Your Code" class="btn-ide-action fa fa-download ease"></button>
                 <button title="Go Fullscreen" class="btn-ide-action fa fa-expand ease"></button>
                 <!-- <button title="Exit Fullscreen" class="btn-ide-action fa fa-compress ease"></button> -->
@@ -71,5 +72,6 @@
 </body>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 </html>
