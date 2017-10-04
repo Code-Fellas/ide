@@ -2,15 +2,33 @@
 <html>
 <style>
 body {
-margin: 150px 0px 0px 450px;
+    margin: 150px 0px 0px 450px;
 }
+
 </style>
-<head><title>IDE</title></head>
+
+<head>
+    <title>IDE</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
 <body>
-<form action="/submit" id="userform">
-<textarea rows="20" cols="50" name="comment" form="userform" >
-Enter text here...</textarea><br><br><br>
-<button type = "submit">Submit</button>
-</form>
+    
+    <div class="container-fluid">
+        
+            <form action="/submit" id="userform">
+                <textarea rows="20" cols="50" name="comment" form="userform">
+                    Enter text here...</textarea>
+                <br>
+                <br>
+                <br>
+                <button class="form-control btn" type="submit" type="button">ButtonSubmit</button>
+            </form>
+        </div>
+    
 </body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 </html>
