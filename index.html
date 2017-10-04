@@ -1,34 +1,174 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My IDE</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .tool-ul{list-style:none;}
+		.tool-ul-li{
+			display: inline-block;
+		}
+		.head{
+			background: #e1e1e1;
+			width: auto;
+			height:30px;
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+		}
+		.editor{
+			background: #1e1e1e;
+			width: auto;
+			height: auto;
+			border-radius: 5px;
+		}
+		.footer{
+			background: #0075c3;
+			width: auto;
+			height: 30px;
+			margin-top: auto;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+
+		}
+		.bitem-ul{
+			list-style: none;
+		}
+		.bitem-u-li{
+			display: inline-block;
+		}
+		.itemred{
+			background: #ff5f5c;
+			width: 15px;
+			height: 15px;
+			border-radius: 60px;
+			margin-left: -39px;
+			margin: 9px -36px;
+		}
+		.itemyl{
+			background: #ffbb4e;
+			width: 15px;
+			height: 15px;
+			border-radius: 60px;
+			margin-left: -39px;
+			margin: 9px -19px;
+		}
+		.itemgr{
+			background: #00ca58;
+			width: 15px;
+			height: 15px;
+			border-radius: 60px;
+			margin-left: -39px;
+			margin: 9px 0px;
+		}
+		.itemtext{
+			 background: #000;
+			 width: 15px;
+			 height: 15px;
+			 font-family: Arial;
+			 margin-left: -39px;
+			 margin: 9px 22px;
+			 border-radius: 4px;
+		 }
+		.body{
+			color: #fff;
+		}
+		.textarea{
+			background-color: #272822;
+            font-family: consolas,"courier new",monospace;
+            font-size: 15px;
+            height: 399px;
+            width: 98%;
+            padding: 8px;
+            resize: none;
+            border: none;
+            line-height: normal;
+            color: #fff;
+            overflow: auto;
+		}
+		.textarea:focus{
+            outline: none;
+		}
+		.iframeshow{
+			background: #e6e6e6;
+			width: auto;
+			height: 339px;
+			overflow-y: auto;
+			color: #000;
+			font-family: Arial;
+		}
+		#btn-view{
+			width: auto;
+		}
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="editor">
+	<div class="head">
+		<div class="bitem">
+			<ul class="bitem-ul">
+			  <li><p style="text-align: center; font-size: 22px"><b>My Area</b></p></li>
+			  
+			</ul>
+		</div>
+	</div>
+	<div class="body">
+	  <textarea class="textarea" name="code_input" id="code_input">
+<!DOCTYPE html>
 <html>
-<style>
-body {
-    margin: 150px 0px 0px 450px;
+ <head>
+  <title></title>
+ </head>
+ <body>
+		
+ </body>
+</html>
+	  </textarea>
+	   <button class="btn btn-primary" id="btn-view" onClick="preview();">Result</button>
+	   
+		<button class="btn btn-success" id="btn-view" onClick="">Submit</button>	  
+		<div id="iframeshow" class="iframeshow">
+	  	
+	  </div>
+	</div>
+	<div class="footer">
+		
+	</div>
+</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+function formatText(tag) {
+   var myTextArea = document.getElementById('code_input');
+   var myTextAreaValue = myTextArea.value;
+   var selected_txt = myTextAreaValue.substring(myTextArea.selectionStart, myTextArea.selectionEnd);
+   var before_txt = myTextAreaValue.substring(0, myTextArea.selectionStart);
+   var after_txt = myTextAreaValue.substring(myTextArea.selectionEnd, myTextAreaValue.length);
+   myTextArea.value = before_txt + '<' + tag + '>' + selected_txt + '</' + tag + '>' + after_txt;
+}
+function preview() {
+	var textbox , view ;
+    textbox = document.getElementById('code_input');
+	view = document.getElementById("iframeshow");
+	view.innerHTML = textbox.value
 }
 
-</style>
-
-<head>
-    <title>IDE</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    
-    <div class="container-fluid">
-        
-            <form action="/submit" id="userform">
-                <textarea rows="20" cols="50" name="comment" form="userform">
-                    Enter text here...</textarea>
-                <br>
-                <br>
-                <br>
-                <button class="form-control btn" type="submit" type="button">ButtonSubmit</button>
-            </form>
-        </div>
-    
+function onload(){
+	var textarea = document.getElementById("code_input");
+	textarea.onkeypress = function(e){
+		if( e.which === 13)
+		{
+			this.value += "<br>";
+		}
+	}
+}
+</script>
 </body>
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 </html>
