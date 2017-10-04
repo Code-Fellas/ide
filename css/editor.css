@@ -49,3 +49,12 @@ body {
 .code-editor-wrapper {
     margin-top: 20px;
 }
+
+.btn-run_code,
+.btn-submit_code {
+    min-width: 120px;
+}
+
+.btn-submit_code {
+    margin-left: 10px;
+}
