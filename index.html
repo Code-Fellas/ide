@@ -10,8 +10,19 @@
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-<body>
+<script>
+  function btnColor(btn) {
+     if (btn == false) {
+         document.body.style.background = '#FFFFFF';
+     }
+    else {
+    document.body.style.background = '#696969';
+    }
+}
+</script>
+    
+</style>
+<body id="changes">
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
@@ -50,7 +61,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="editor-buttons pull-right">
                 <button title="Editor Help" class="btn-ide-action fa fa-question ease"></button>
-                <input type="checkbox" checked data-toggle="toggle" data-on="black" data-off="white">
+                <input type="checkbox" checked data-toggle="toggle" data-on="black" data-off="white" onchange="btnColor($(this).prop('checked'))" >
                 <button title="Download Your Code" class="btn-ide-action fa fa-download ease"></button>
                 <button title="Go Fullscreen" class="btn-ide-action fa fa-expand ease"></button>
                 <!-- <button title="Exit Fullscreen" class="btn-ide-action fa fa-compress ease"></button> -->
