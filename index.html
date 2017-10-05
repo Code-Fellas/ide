@@ -23,7 +23,7 @@
         
      }
     else {
-    document.body.style.background = '#696969';
+    document.body.style.background = '#222';
     property.style.backgroundColor='#000000';
     property1.style.backgroundColor='#000000';
     }
@@ -84,7 +84,8 @@
               
                 <button class="btn btn-primary btn-run_code pull-right" type="submit" type="button">Run</button>
                 <button class="btn btn-primary btn-submit_code pull-right" type="submit" type="button">Submit</button>
-
+                <input id="fileInput" type="file" style="display:none;" />
+                <button id="insertcode" class="btn btn-primary btn-submit_code pull-right" type="button"><input type="button" value="Insert Code" style="background: transparent; border:0;" onclick="document.getElementById('fileInput').click();" /></button>
             </form>
         </div>
     </div>
