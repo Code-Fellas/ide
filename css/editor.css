@@ -21,8 +21,8 @@ body {
 .navbar-default .navbar-nav>li>a:focus {
 	color: limegreen!important;
 }
-.navbar-default .navbar-nav>.active>a, 
-.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
 	color: limegreen!important;
 	background-color: transparent!important;
@@ -31,27 +31,16 @@ body {
     transition: all ease 0.2s;
 }
 .lang-chooser:focus {
-   
+
     outline: lime auto 5px;
 }
 
-.code-editor {
-    width: 100%;
-    background-color: #000000;
-    border-color: rgba(50,205,50,.8);
-    color: limegreen;
-    font-family: monospace;
-    border-radius: 4px;
-    padding: 5px;
+.CodeMirror {
     margin-bottom: 20px;
-    resize: vertical;
 }
-.code-editor:focus {
-   
-    outline: lime auto 5px;
-}
+
 .btn-ide-action:focus {
-   
+
     outline: lime auto 5px;
 }
 .btn-ide-action {
@@ -93,7 +82,7 @@ body {
 .btn:active {
     background-color: green;
 	border-color: green;
-    
+
 }
 .lang-chooser {
     min-width: 250px;
