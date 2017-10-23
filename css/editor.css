@@ -129,3 +129,8 @@ body {
 .cm-s-base16-light {
     border: 1px solid #dedede;
 }
+
+/*change height of editor*/
+.CodeMirror {
+	height: 450px;
+}
