@@ -12,6 +12,13 @@
         <link rel="stylesheet" type="text/css" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <style>
+        body{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 
 <body>
 
@@ -54,7 +61,7 @@
                     <button title="Editor Help" class="btn-ide-action fa fa-question ease"></button>
                     <input type="checkbox" checked data-toggle="toggle" data-on="Dark" data-off="Light" class="themeSwitcher" >
                     <button title="Download Your Code" class="btn-ide-action fa fa-download ease"></button>
-                    <button title="Go Fullscreen" class="btn-ide-action fa fa-expand ease"></button>
+                    <button title="Go Fullscreen" onclick="fullscreen()" class="btn-ide-action fa fa-expand ease"></button>
                     <!-- <button title="Exit Fullscreen" class="btn-ide-action fa fa-compress ease"></button> -->
                 </div>
             </div>
@@ -71,6 +78,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function fullscreen() {
+            var doc = document.documentElement;
+            if (doc.requestFullscreen) {
+                doc.requestFullscreen();
+            } else if (doc.webkitRequestFullscreen) {
+                doc.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            } else if (doc.mozRequestFullScreen) {
+                doc.mozRequestFullScreen();
+            }
+        }
+
+    </script>
 
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
