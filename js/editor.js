@@ -4,8 +4,15 @@
     var editor = document.getElementById('codes');
     var codeMirror = CodeMirror.fromTextArea(editor, {
         lineNumbers: true,
-        mode: 'htmlmixed',
-        theme: 'solarized dark'
+        mode: "text/x-c++src",
+        theme: 'solarized dark',
+        tabSize: 4,
+        matchBrackets: true,
+        indentWithTabs: true,
+        smartIndent: true,
+        indentUnit: 4,
+        lineWrapping: true,
+        autofocus: true
     });
 
     $('.themeSwitcher').on('change', function (e) {

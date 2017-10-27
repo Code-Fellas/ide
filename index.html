@@ -39,14 +39,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 pull-left">
-                <select class="lang-chooser">
-                    <option value="html">HTML</option>
-                    <option value="php">PHP</option>
-                    <option value="css">CSS</option>
-                    <option value="python">Python</option>
-                    <option value="java">Java</option>
-                    <option value="c++">C++</option>
-                    <option value="c#">C#</option>
+                <select id='selectLang' class="lang-chooser">
+                    <option value="selectLang">Choose a Language</option>
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -62,7 +56,7 @@
         <div class="row code-editor-wrapper">
             <div class="col-lg-12 col-md-12">
                 <form action="/submit" id="userform">
-                    <textarea rows="20" cols="50" name="comment" form="userform" class="code-editor" id="codes">Your code goes here</textarea>
+                    <textarea placeholder="Your code goes here" rows="20" cols="50" name="comment" form="userform" class="code-editor" id="codes"></textarea>
 
                     <button class="btn btn-primary btn-run_code pull-right" type="submit">Run</button>
                     <button class="btn btn-primary btn-submit_code pull-right" type="submit">Submit</button>
@@ -85,6 +79,7 @@
     <script src="js/lib/modes/python.js"></script>
     <script src="js/lib/modes/xml.js"></script>
     <script src="js/editor.js"></script>
+    <script src="js/ide.js"></script>
 
 </body>
 </html>
