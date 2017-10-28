@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    console.log('balle')
     fetch("http://127.0.0.1:8000/api/ide/", {
         method: "GET",
         headers: {
@@ -18,6 +17,7 @@ $(document).ready(function(){
                         }
                     )
                 );
+                //$('#test').html(data['data'][i]['display_name'].split('\\n').join('<br>'));
             }
     })
 
