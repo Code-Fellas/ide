@@ -44,15 +44,19 @@
                     <option value="selectLang">Choose a Language</option>
                 </select>
             </div>
-            <div class="col-lg-6 col-md-6 pull-left">
-                <select id='selectContest' class="contest-chooser">
-                    <option value="selectContest">Select a Contest</option>
-                </select>
-            </div>
-            <div class="col-lg-6 col-md-6 pull-left">
-                <select id='selectProblem' class="problem-chooser">
-                    <option value="selectProblem">Select Problem</option>
-                </select>
+            <div style="display: flex">
+                <div class="col-lg-4 col-md-4 pull-left">
+                    <select id='selectContest' class="contest-chooser">
+                        <option value="selectContest">Select a Contest</option>
+                    </select>
+                </div>
+                <span>
+                    <div class="col-lg-4 col-md-4 pull-left">
+                        <select id='selectProblem' class="problem-chooser">
+                            <option value="selectProblem">Select Problem</option>
+                        </select>
+                    </div>
+                </span>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="editor-buttons pull-right">
@@ -64,6 +68,30 @@
                 </div>
             </div>
         </div>
+        <div id="margin-bottom">
+            <div id="message" class="message-def run-info">
+                <div id='helper' class="run-details">
+                    <div class="run-details-info">
+                        <div class="key" id="status_key">
+                            Status
+                        </div>
+                        <div class="value" id="status_val">
+
+                        </div>
+                    </div>
+                    <div class="run-details-info">
+                        <div class="key" id="time_key">
+                            Time
+                        </div>
+                        <div class="value" id="time_val">
+
+                        </div>
+                    </div>
+                    <span><button id='rmvbtn' class="small-editor-button fa fa-times"></button></span>
+                </div>
+            </div>
+        </div>
+
         <div class="row code-editor-wrapper">
             <div class="col-lg-12 col-md-12">
                 <form  id="userform">
@@ -76,6 +104,7 @@
             </div>
         </div>
     </div>
+
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>

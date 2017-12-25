@@ -76,6 +76,10 @@ $('#selectContest').change(function(){
 
 });
 
+$('#rmvbtn').click(function () {
+    $('#message').addClass('message-def');
+});
+
 $('#userform').submit(function (e) {
     e.preventDefault();
     var language_code = $('#selectLang').val();
@@ -98,10 +102,33 @@ $('#userform').submit(function (e) {
       },
       body: JSON.stringify(data)
     }).then(res=>res.json())
-      .then(res => console.log(res));
+        .then((data) => {
+                var message_div = $('#message');
+                message_div.removeClass('message-def');
+                var value_status = $('#status_val');
+                var time_val = $('#time_val');
+                var helper_val = $("#helper");
+            if(data['status_check']){
+                value_status.html(data['Submission Status']);
+                time_val.html(data['Time']);
 
-    console.log(language_code);
-    console.log(contest_code);
-    console.log(problem_code);
-    console.log(code);
+                if(data['Submission Status']=='AC') {
+                    message_div.addClass("submit-correct");
+                    helper.addClass('corr');
+                }
+                else {
+                    message_div.addClass("submit-error");
+                    helper.addClass('err');
+                }
+            }
+            else{
+                value_status.html(data['Submission Status']);
+                message_div.addClass("submit-error");
+            }
+            console.log(language_code);
+            console.log(contest_code);
+            console.log(problem_code);
+            console.log(code);
+        })
 });
+
